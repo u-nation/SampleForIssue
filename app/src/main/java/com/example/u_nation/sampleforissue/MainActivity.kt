@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        setTitle("Lollipop")
+        title = "Lollipop"
         binding.recycler.run {
             adapter = simpleAdapter
             layoutManager = LinearLayoutManager(this@MainActivity)
