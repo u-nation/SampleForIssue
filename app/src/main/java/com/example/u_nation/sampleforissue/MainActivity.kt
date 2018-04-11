@@ -1,6 +1,7 @@
 package com.example.u_nation.sampleforissue
 
 import android.databinding.DataBindingUtil
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        title = "Lollipop"
+        title = "API level ${Build.VERSION.SDK_INT}"
         binding.recycler.run {
             adapter = simpleAdapter
             layoutManager = LinearLayoutManager(this@MainActivity)
